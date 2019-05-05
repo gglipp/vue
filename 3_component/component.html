@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    </head>
+    <body>
+        <div id="app-7">
+            <ol>
+                <!--
+                    每个todo-item绑定一个todo对象，包含一个key
+                -->
+                <todo-item
+                    v-for="item in groceryList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id"
+                >
+                </todo-item>
+
+                 <todo-item-origin
+                    v-for="item in groceryList"
+                    v-bind:todo="item"
+                    v-bind:key="item.id"
+                >
+                </todo-item-origin>
+            </ol>
+        </div>
+        <script src="component.js"></script>
+    </body>
+</html>
