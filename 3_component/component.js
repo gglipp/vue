@@ -23,3 +23,5 @@ var app7 = new Vue({
         ]
     }
 })
+
+
