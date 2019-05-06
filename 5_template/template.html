@@ -1,0 +1,20 @@
+<html>
+
+<head>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <span v-once>{{message}}</span>
+        <br/>
+        <span>{{message}}</span>
+        <br/>
+        <span>{{ message.split('').reverse().join('')}}</span>
+        <br/>
+        <span>using raw html by v-html: <span v-html="rawHtml"></span></span>
+    </div> 
+    <script src="template.js"></script>
+</body>
+
+</html>
