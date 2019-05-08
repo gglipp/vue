@@ -1,10 +1,14 @@
 <html>
     <head>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-        <script src="class.js"></script>
     </head>
     <body>
         <div id="app-1" v-bind:class="{ active: isActive }"></div> 
+        <div id="app-2" v-bind:class="classObject"></div>
+        <div id="app-3" v-bind:class="computedObject"></div>
+        <div id="app-4" v-bind:class="[activeClass, errorClass]"></div>
+        <div id="app-5" v-bind:class="[{ active: isActive }, errorClass]"></div>
+        <script src="class.js"></script>
         
     </body>
 </html>
