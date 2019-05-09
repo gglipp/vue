@@ -3,10 +3,18 @@
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     </head>
     <body>
-        <div id="app">
-            <ul> 
-                <li v-for:"todo in todos">
-                    {{ todo.text }}
+        <div>
+            <ul id="app"> 
+                <li v-for="(todo, index, name) in todos">
+                    {{ todo.text }}-{{ index }}
+                </li>
+            </ul>
+        </div>
+
+        <div id="app-2">
+            <ul>
+                <li v-for="(value, name, index) of object" v-bind:key="value.id">
+                    {{ index }}-{{ name }}-{{ value }}
                 </li>
             </ul>
         </div>
