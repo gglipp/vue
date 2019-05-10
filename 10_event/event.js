@@ -6,10 +6,21 @@ var app = new Vue({
     methods: {
         add: function(event) {
             this.counter += 1
-            console.info(event)
             if (event) {
                 console.info(event.target.tagName)
             }
+        },
+        say: function(message) {
+            console.info(message)
+        },
+        warn: function(message, event) {
+            if(event) event.preventDefault();
+            console.info(message)
+        },
+        
+        once: function() {
+            console.info('click once')
         }
+
     },
 })

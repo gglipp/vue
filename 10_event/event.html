@@ -8,6 +8,13 @@
             <p>{{ counter }} times</p>
 
             <button v-on:click="add">Add 1 by Method</button>
+            <p></p>
+            <button v-on:click="say('hello')">say hello</button>
+            <button v-on:click="say('hi')">say hi</button>
+            <p></p>
+            <button v-on:click="warn('warning message', $event)">event</button>
+            <p></p>
+            <button @click.once="once">click once</button>
         </div>
         <script src="event.js"></script>
     </body>
